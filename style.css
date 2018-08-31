@@ -1,0 +1,152 @@
+.input-group {
+  margin-top: 10px;
+}
+
+.input-group label {
+  display:block;
+  color: #333333;
+  font-size: 13px;
+  line-height: 1.5em;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 0 3px;
+  display: block;
+  vertical-align: text-bottom;
+}
+#chart {
+  font-family: 'Courier',monospace;
+  font-size: 16px;
+}
+
+
+label span {
+  color: #CC0000;
+}
+.input-group input {
+  display:block;
+  width: 100%;
+}
+
+.input-group.half {
+  display: inline-block;
+  min-width: 160px;
+}
+.input-group.half + .input-group.half {
+  margin-left: 10px;
+}
+
+#elements-list {
+  display:none;
+  position: fixed;
+  margin: auto;
+  width: 320px;
+  max-height: calc(100vh -20px);
+  height: 320px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.4);
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: #fff;
+  border-radius: 4px;
+  z-index:1200;
+}
+#elements-list.show {
+  display: block;
+}
+.listItem {
+  height: 30px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #ddd; 
+  border: 1px solid #fff; 
+  text-align:center;
+}
+
+
+/* chord charts */
+.chordChartDisplay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin: auto;
+  width: calc(100vw - 30%);
+  height: calc(100vh - 20%);
+  background-color: #000;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.25);
+  color: #fff;
+  z-index: 2000;
+  padding: 20px;
+
+  font-family: 'Avenir Next Condensed', sans-serif;
+	text-transform: uppercase;
+	font-size: 46pt;
+	line-height: 46px;
+	background-color: #000;
+	color: #ccc;
+  padding: 20px;
+  overflow-y: auto;
+}
+.chordChartDisplay .close {
+  position: absolute;
+  top:0;
+  right:0;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+.chordChartDisplay h1 {
+  font-family: 'Avenir Next Condensed', sans-serif;
+  margin:0;
+  font-size: 46pt;
+	line-height: 46px;
+}
+.chordChartDisplay p {
+  font-family: 'Avenir Next Condensed', sans-serif;
+  margin:0;
+  font-size: 46pt;
+	line-height: 46px;
+}
+
+.chordChartDisplay p:first-child {
+			color: #90CAF9; /*lightBlue*/
+}
+.chordChartDisplay p:nth-child(2) {
+	color:#03a9f4; /*medBlue*/
+}
+.chordChartDisplay p:nth-child(3) {
+	color:#8BC34A; /*lightGreen*/
+}
+.chordChartDisplay p:nth-child(4) {
+	color:#359439; /*medGreen*/
+}
+.chordChartDisplay p:nth-child(5) {
+	color:#ffc107; /*lightOrange*/
+}
+.chordChartDisplay p:nth-child(6) {
+	color:#ff9800; /*medOrange*/
+}
+.chordChartDisplay p:nth-child(7) {
+	color:#d258e6; /*lightPurple*/
+}
+.chordChartDisplay p:nth-child(8) {
+	color:#9c27b0; /*medPurple*/
+}
+.chord {
+	color:#ffeb3b;
+	font-size: .5em;
+	/*line-height: .5em;*/
+	baseline-shift: 20pt;
+	vertical-align: top;
+}
