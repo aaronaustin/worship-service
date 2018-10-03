@@ -80,11 +80,11 @@
 
                                                         <hr>
                                                     <?php else:?>
-														<h1 style="font-family: 'Lato'; font-size: 10pt; font-weight: bold;">
+														<h1 style="font-family: 'Lato'; font-size: 10pt; font-weight: bold;margin-top: 12pt; margin-bottom:3pt;">
                                                             <?php echo $item['stand']? '+ ' : ''?><?php echo $item['heading'] ?>&Tab;<?php echo $item['leader'] ?>
                                                         </h1>
                                                         <?php if($item['link']): ?>
-                                                                <h2 style="font-family: 'Frank Ruhl Libre'; font-size: 10pt; font-weight: normal;">
+                                                                <h2 style="font-family: 'Frank Ruhl Libre'; font-size: 10pt; font-weight: normal;margin-top: 3pt; margin-bottom:6pt;">
                                                                     <?php if($item['element_title']): ?>
                                                                         <?php echo '"'.$item['element_link']->post_title.'"'; ?>
                                                                     <?php endif; ?>
@@ -108,12 +108,13 @@
                                                                 <?php if($item['element_title']): ?>
                                                                     <?php echo '"'.$item['title'].'"';?>
                                                                 <?php endif; ?>
-                                                                <?php if($item['text']): ?>
-                                                                    <?php echo $item['italic'] ? '<em>' : '' ?>
-                                                                    <?php echo $item['element_text'];?>
-                                                                    <?php echo $item['italic'] ? '</em>' : '' ?>
-                                                                <?php endif; ?>
+                                                                
                                                             </h2>
+                                                            <?php if($item['text']): ?>
+                                                                <?php echo $item['italic'] ? '<em>' : '' ?>
+                                                                <?php echo $item['element_text'];?>
+                                                                <?php echo $item['italic'] ? '</em>' : '' ?>
+                                                            <?php endif; ?>
                                                         <?php endif; ?>
                                                      <?php endif; ?>   
     
