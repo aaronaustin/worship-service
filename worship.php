@@ -22,7 +22,7 @@ function create_worship_post_type() {
     	'not_found' =>  'No Worship Service Found',
     	'not_found_in_trash' => 'No Worship Service found in Trash',
     	'parent_item_colon' => '',
-    	'menu_name' => 'Worship Service'
+        'menu_name' => 'Worship Service'
     );
     //register post type
 	register_post_type( 'worship', array(
@@ -36,6 +36,7 @@ function create_worship_post_type() {
 		'rewrite' => array( 'slug' => 'worship'),
 		'rest_base' => 'worship',
         'rest_controller_class' => '',
+        'menu_icon' => 'dashicons-admin-multisite',
         'supports' => array( 'title', 'thumbnail','worship_start_datetime' )
 		)
 	);

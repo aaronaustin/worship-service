@@ -6,32 +6,32 @@
         <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700|Lato:400,700" rel="stylesheet"> 
         <style type="text/css">
             body {
-                font-size: 10px;
+                font-size: 10pt;
                 font-family: 'Frank Ruhl Libre', serif;
             }
             h1 {
                 font-family: 'Lato', sans-serif;
-                font-size: 10px;
+                font-size: 10pt;
                 font-weight: bold;
             }
             h1.title {
                 font-family: 'Frank Ruhl Libre', serif;
-                font-size: 28px;
+                font-size: 28pt;
                 font-weight: normal;
             }
             h2 {
                 font-family: 'Frank Ruhl Libre', serif;
-                font-size: 10px;
+                font-size: 10pt;
                 font-weight: normal;
             }
             h3.subtitle {
                 font-family: 'Lato', sans-serif;
-                font-size: 9px;
+                font-size: 9pt;
                 font-weight: 300;
                 text-transform: uppercase;
             }
             .credit {
-                font-size: 9px;
+                font-size: 9pt;
                 font-style: italic;
                 
             }
@@ -70,8 +70,8 @@
 ?>
    <body>
 
-                                            <h1 class="title"><?php echo get_field('worship_title'); ?></h1>
-                                            <h3 class="subtitle"><?php echo strtoupper(get_field('date')); ?></h3>
+                                            <h1 class="title" style="font-family:'Frank Ruhl Libre'; font-size: 28pt; font-weight: normal;"><?php echo get_field('worship_title'); ?></h1>
+                                            <h3 class="subtitle" style="font-family: 'Lato', sans-serif; font-size: 9pt; font-weight: 300; text-transform: uppercase;"><?php echo strtoupper(get_field('date')); ?></h3>
                                         <?php foreach($worship_order as $item): ?>
                                                     <?php if($item['link'] && $item['element_link']->type == 'quote'): ?>
                                                         <hr>
@@ -80,11 +80,11 @@
 
                                                         <hr>
                                                     <?php else:?>
-														<h1>
+														<h1 style="font-family: 'Lato'; font-size: 10pt; font-weight: bold;">
                                                             <?php echo $item['stand']? '+ ' : ''?><?php echo $item['heading'] ?>&Tab;<?php echo $item['leader'] ?>
                                                         </h1>
                                                         <?php if($item['link']): ?>
-                                                                <h2>
+                                                                <h2 style="font-family: 'Frank Ruhl Libre'; font-size: 10pt; font-weight: normal;">
                                                                     <?php if($item['element_title']): ?>
                                                                         <?php echo '"'.$item['element_link']->post_title.'"'; ?>
                                                                     <?php endif; ?>
@@ -104,7 +104,7 @@
                                                                     &Tab;<span class="credit"><?php echo $item['element_link']->credit; ?></span>
                                                                 <?php endif;?>
                                                         <?php else:?>  
-                                                            <h2>
+                                                            <h2 style="font-family: 'Frank Ruhl Libre'; font-size: 10pt; font-weight: normal;">
                                                                 <?php if($item['element_title']): ?>
                                                                     <?php echo '"'.$item['title'].'"';?>
                                                                 <?php endif; ?>
