@@ -1,7 +1,7 @@
 <?php
 /*Plugin Name: Create Worship Service Post Type
 Description: This plugin registers the worship post type.
-Version: 1.0.1
+Version: 1.0.2
 License: GPLv2
 GitHub Plugin URI: https://github.com/aaronaustin/worship-service
 */
