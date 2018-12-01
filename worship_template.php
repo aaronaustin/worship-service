@@ -63,6 +63,8 @@
 	$audio_posts = get_posts($audio_args);
 	$blog_posts = get_posts($blog_args);
     $worship_order = get_field('order');
+
+    
     // echo '<pre>';
     // print_r( get_field('order')  );
     // echo '</pre>';
@@ -70,16 +72,17 @@
 ?>
    <body>
 
-                                            <h1 class="title" style="font-family:'Frank Ruhl Libre'; font-size: 28pt; font-weight: normal;"><?php echo get_field('worship_title'); ?></h1>
-                                            <h3 class="subtitle" style="font-family: 'Lato', sans-serif; font-size: 9pt; font-weight: 300; text-transform: uppercase;"><?php echo strtoupper(get_field('date')); ?></h3>
+                                            <h1 class="title" style="font-family:'Frank Ruhl Libre'; font-size: 28pt; font-weight: normal;margin-top: 12pt; margin-bottom:3pt;"><?php echo get_field('worship_title'); ?></h1>
+                                            <h3 class="subtitle" style="font-family: 'Lato', sans-serif; font-size: 9pt; font-weight: 300; text-transform: uppercase;margin-top: 0pt; margin-bottom:20pt;"><?php echo strtoupper(get_field('date')); ?></h3>
                                         <?php foreach($worship_order as $item): ?>
                                                     <?php if($item['link'] && $item['element_link']->type == 'quote'): ?>
                                                         <hr>
-                                                            <?php echo $item['element_link']->post_content; ?><br>
-                                                            <?php echo '—'.$item['element_link']->author; ?>
+                                                            <span style="text-align:center"><?php echo $item['element_link']->post_content; ?><br>
+                                                            <?php echo '—'.$item['element_link']->author; ?></span>
 
                                                         <hr>
                                                     <?php else:?>
+                                                        <?php $headingTag = $item['stand'] ? 'h3' : 
 														<h1 style="font-family: 'Lato'; font-size: 10pt; font-weight: bold;margin-top: 12pt; margin-bottom:3pt;">
                                                             <?php echo $item['stand']? '+ ' : ''?><?php echo $item['heading'] ?>&Tab;<?php echo $item['leader'] ?>
                                                         </h1>

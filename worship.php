@@ -12,12 +12,12 @@ function create_worship_post_type() {
 	$labels = array(
  		'name' => 'Worship Service',
     	'singular_name' => 'Worship Service',
-    	'add_new' => 'Add New Worship Service',
-    	'add_new_item' => 'Add New Worship Service',
-    	'edit_item' => 'Edit Worship Service',
-    	'new_item' => 'New Worship Service',
-    	'all_items' => 'All Worship Service',
-    	'view_item' => 'View Worship Service',
+    	'add_new' => 'New Service',
+    	'add_new_item' => 'Add New Service',
+    	'edit_item' => 'Edit Service',
+    	'new_item' => 'New Service',
+    	'all_items' => 'All Services',
+    	'view_item' => 'View Service',
     	'search_items' => 'Search Worship Service',
     	'not_found' =>  'No Worship Service Found',
     	'not_found_in_trash' => 'No Worship Service found in Trash',
@@ -25,7 +25,7 @@ function create_worship_post_type() {
         'menu_name' => 'Worship Service'
     );
     //register post type
-	register_post_type( 'worship', array(
+	register_post_type( 'worship_order', array(
 		'labels' => $labels,
         'show_in_rest' => true,
 		'has_archive' => true,
@@ -33,8 +33,8 @@ function create_worship_post_type() {
 		'taxonomies' => '',
 		'exclude_from_search' => true,
 		'capability_type' => 'post',
-		'rewrite' => array( 'slug' => 'worship'),
-		'rest_base' => 'worship',
+		'rewrite' => array( 'slug' => 'worship_order'),
+		'rest_base' => 'worship_order',
         'rest_controller_class' => '',
         'menu_icon' => 'dashicons-admin-multisite',
         'supports' => array( 'title', 'thumbnail','worship_start_datetime' )
